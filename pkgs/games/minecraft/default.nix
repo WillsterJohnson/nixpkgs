@@ -30,6 +30,7 @@
 , systemd
 , flite ? null
 , libXxf86vm ? null
+, libGL
 }:
 let
   desktopItem = makeDesktopItem {
@@ -48,6 +49,7 @@ let
     alsa-lib # needed for narrator
     flite # needed for narrator
     libXxf86vm # needed only for versions <1.13
+    libGL
   ];
 
   libPath = lib.makeLibraryPath ([
